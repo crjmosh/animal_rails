@@ -1,0 +1,11 @@
+<h1>
+	Edit Person
+	<%= @person.name %>
+</h1>
+<hr>
+
+<%= render(partial: 'person_form') %>
+
+<hr>
+
+<%= link_to '<< Cancel', people_path %>

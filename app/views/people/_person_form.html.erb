@@ -1,0 +1,16 @@
+<%= form_for @person do |f| %>
+	<%= f.label :name %>:
+	<%= f.text_field :name %>
+	<br>
+	<%= f.label :age %>:
+	<%= f.text_field :age %>
+	<br>
+	<%= f.label :gender %>:
+	<%= f.text_field :gender %>
+	<br>
+	<%= f.label :alive %>:
+	<%= f.radio_button :alive, true %> Yes
+	<%= f.radio_button :alive, false %> No
+	<br>
+	<%= f.submit 'Submit' %>
+<% end %>

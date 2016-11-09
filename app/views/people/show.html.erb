@@ -1,0 +1,18 @@
+<h1>
+	<%= @person.name %>
+</h1>
+<hr>
+
+<div>
+	<% if @person.age %>
+		<h4>Age: <%= @person.age %></h4>
+	<% end %>
+
+	<% if @person.gender %>
+		<h4>Gender: <%= @person.gender %></h4>
+	<% end %>
+
+	<h4>Alive: <%= @person.alive ? 'Yes' : 'No' %></h4>
+</div>
+
+<%= link_to '<< All People', people_path %>
