@@ -18,7 +18,7 @@ class Person < ApplicationRecord
 		# belongs_to
 		# has_many_through
 		# has_one_through
-	has_many :animals
+	has_many :animals, dependent: :destroy
 
 	# instance methods
 	def info

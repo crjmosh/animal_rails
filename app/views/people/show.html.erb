@@ -15,4 +15,9 @@
 	<h4>Alive: <%= @person.alive ? 'Yes' : 'No' %></h4>
 </div>
 
-<%= link_to '<< All People', people_path %>
+<%= link_to "#{@person.name}'s Animals >>", person_animals_path(@person) %>
+
+<br><br>
+<hr><br>
+
+<%= link_to '<< Back To All People', people_path %>

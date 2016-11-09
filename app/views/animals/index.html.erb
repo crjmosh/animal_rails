@@ -1,0 +1,24 @@
+<h1> All Animals For: <%= @person.name %> </h1>
+<hr>
+
+<% if @animals.any? %>
+	<% @animals.each do |animal| %>
+		<div>
+		<%= link_to animal.name, person_animal_path(@person, animal) %> - 
+		<%= link_to 'Edit', edit_person_animal_path(@person, animal) %> | 
+		<%= link_to 'Delete', person_animal_path(@person, animal), method: :delete,
+			data:{confirm: 'Are you sure you want to remove this animal?'}	 %>
+		</div>
+	<% end %>
+<% else %>
+	<h4> <%= @person.name %> doesn't have any animals. </h4>
+<% end %>
+
+<br>
+
+<%= link_to 'Add New Animal >>', new_person_animal_path(@person) %>
+
+<br><br>
+<hr><br>
+
+<%= link_to '<< Back to Person Page', person_path(@person) %>
